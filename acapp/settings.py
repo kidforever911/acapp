@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-)kh+_mw-zst@qm859_+whv+ujum9^^2=oexp71_(d$!@2vh=gh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["8.142.3.180", "app713.acapp.acwing.com.cn"]
+ALLOWED_HOSTS = ["8.142.3.180", "game.kidforever.cn", "app713.acapp.acwing.com.cn"]
 
 
 # Application definition

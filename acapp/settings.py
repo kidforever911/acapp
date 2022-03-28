@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ["8.142.3.180", "game.kidforever.cn", "app713.acapp.acwing.com.c
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'game.apps.GameConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -139,3 +140,15 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ASGI_APPLICATION = 'acapp.asgi.application'
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
+}
+
+ROOM_CAPACITY = 3

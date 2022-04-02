@@ -34,7 +34,7 @@ class Settings{
         </div>
         <br>
         <div class="ac-game-settings-acwing">
-            <img width="30" src="https://app713.acapp.acwing.com.cn/static/image/settings/acwing_logo.png">
+            <img width="30" src="https://game.kidforever.cn/static/image/settings/acwing_logo.png">
             <br>
             <div>
                 AcWing一键登录
@@ -72,7 +72,7 @@ class Settings{
         </div>
         <br>
         <div class="ac-game-settings-acwing">
-            <img width="30" src="https://app713.acapp.acwing.com.cn/static/image/settings/acwing_logo.png">
+            <img width="30" src="https://game.kidforever.cn/static/image/settings/acwing_logo.png">
             <br>
             <div>
                 AcWing一键登录
@@ -140,7 +140,7 @@ class Settings{
         this.$login_error_message.empty();
 
         $.ajax({
-            url: "https://app713.acapp.acwing.com.cn/settings/login/",
+            url: "https://game.kidforever.cn/settings/login/",
             type: "GET",
             data:{
                 username: username,
@@ -179,7 +179,7 @@ class Settings{
     getinfo(){
         let outer = this;
         $.ajax({
-            url: "https://app713.acapp.acwing.com.cn/settings/getinfo/",
+            url: "https://game.kidforever.cn/settings/getinfo/",
             type: "GET",
             data: {
                 platform: outer.platform,

@@ -757,7 +757,7 @@ class MultiPlayerSocket {
     constructor(playground) {
         this.playground = playground;
 
-        this.ws = new WebSocket("wss://app713.acapp.acwing.com.cn/wss/multiplayer/");
+        this.ws = new WebSocket("wss://game.kidforever.cn/wss/multiplayer/");
 
         this.start();
     }
@@ -1011,6 +1011,11 @@ class AcGamePlayground{
 }
 class Settings{
     constructor(root){
+        if(window.location.host === "app713.acapp.acwing.com.cn") {
+                window.location.replace("https://game.kidforever.cn/");
+        }
+
+
         this.root = root;
         this.platform = "WEB";
         if(this.root.AcWingOS) this.platform = "ACAPP";
@@ -1045,7 +1050,7 @@ class Settings{
         </div>
         <br>
         <div class="ac-game-settings-acwing">
-            <img width="30" src="https://app713.acapp.acwing.com.cn/static/image/settings/acwing_logo.png">
+            <img width="30" src="https://game.kidforever.cn/static/image/settings/acwing_logo.png">
             <br>
             <div>
                 AcWing一键登录
@@ -1083,7 +1088,7 @@ class Settings{
         </div>
         <br>
         <div class="ac-game-settings-acwing">
-            <img width="30" src="https://app713.acapp.acwing.com.cn/static/image/settings/acwing_logo.png">
+            <img width="30" src="https://game.kidforever.cn/static/image/settings/acwing_logo.png">
             <br>
             <div>
                 AcWing一键登录
@@ -1160,7 +1165,7 @@ class Settings{
 
     acwing_login(){
         $.ajax({
-            url: "https://app713.acapp.acwing.com.cn/settings/acwing/web/apply_code/",
+            url: "https://game.kidforever.cn/settings/acwing/web/apply_code/",
             type: "GET",
             success: function(resp){
                 if(resp.result === "success"){
@@ -1177,7 +1182,7 @@ class Settings{
         this.$login_error_message.empty();
 
         $.ajax({
-            url: "https://app713.acapp.acwing.com.cn/settings/login/",
+            url: "https://game.kidforever.cn/settings/login/",
             type: "GET",
             data:{
                 username: username,
@@ -1201,7 +1206,7 @@ class Settings{
         this.$register_error_message.empty();
 
         $.ajax({
-            url: "https://app713.acapp.acwing.com.cn/settings/register/",
+            url: "https://game.kidforever.cn/settings/register/",
             type: "GET",
             data:{
                 username: username,
@@ -1224,7 +1229,7 @@ class Settings{
             this.root.AcWingOS.api.window.close();
         }else{
             $.ajax({
-                url: "https://app713.acapp.acwing.com.cn/settings/logout/",
+                url: "https://game.kidforever.cn/settings/logout/",
                 type: "GET",
                 success: function(resp){
                     if(resp.result === "success"){
@@ -1261,7 +1266,7 @@ class Settings{
     getinfo_acapp(){
         let outer = this;
         $.ajax({
-            url: "https://app713.acapp.acwing.com.cn/settings/acwing/acapp/apply_code/",
+            url: "https://game.kidforever.cn/settings/acwing/acapp/apply_code/",
             type: "GET",
             success: function(resp){
                 if(resp.result === "success"){
@@ -1275,7 +1280,7 @@ class Settings{
     getinfo_web(){
         let outer = this;
         $.ajax({
-            url: "https://app713.acapp.acwing.com.cn/settings/getinfo/",
+            url: "https://game.kidforever.cn/settings/getinfo/",
             type: "GET",
             data: {
                 platform: outer.platform,

@@ -9,8 +9,8 @@
 .ac-game-menu-field{
     width:20vw;
     position:relative;
-    top:40%;
-    left:20%;
+    top:16%;
+    left:10%;
 }
 
 .ac-game-menu-field-item{
@@ -198,5 +198,28 @@
     font-size: 2vh;
 
     background-color: rgba(222,225,230, 0.2);
+}
+
+.ac_game_menu_game_introduction_headline {
+    width: 32vw;
+    height: 7vh;
+    font-size: 30px;
+    /* font-style: italic; */
+    text-align: center;
+}
+
+.ac_game_menu_game_introduction_content {
+    height: 6vh;
+}
+
+.ac_game_menu_game_introduction {
+    width: 32vw;
+    position: relative;
+    top: 4%;
+    height: 36vh;
+    background-color: rgb(176 192 216 / 60%);
+    /* color: brown; */
+    left: 61%;
+    border-radius: 10px;
 }
 

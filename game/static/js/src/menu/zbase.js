@@ -3,6 +3,14 @@ class AcGameMenu{
         this.root = root;
         this.$menu = $(`
 <div class="ac-game-menu">
+
+    <div class="ac_game_menu_game_introduction">
+        <div class="ac_game_menu_game_introduction_headline">游戏玩法</div>
+        <div class="ac_game_menu_game_introduction_content">&nbsp&nbsp&nbsp&nbsp移动：鼠标右键点击</div>
+        <div class="ac_game_menu_game_introduction_content">&nbsp&nbsp&nbsp&nbsp技能1：<b>[火球]</b>先按Q键，再按鼠标左键进行技能使用</div>
+        <div class="ac_game_menu_game_introduction_content">&nbsp&nbsp&nbsp&nbsp技能2：<b>[闪现]</b>先按F键，再按鼠标左键进行技能使用</div>
+
+    </div>
     <div class="ac-game-menu-field">
         <div class="ac-game-menu-field-item ac-game-menu-field-item-single-mode">
             单人模式

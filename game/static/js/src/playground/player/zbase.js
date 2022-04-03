@@ -230,6 +230,8 @@ class Player extends AcGameObject{
     update(){
         this.spent_time += this.timedelta / 1000;
 
+        this.update_win();
+
         if(this.character === "me" && this.playground.state === "fighting"){
             this.update_coldtime();
         }
@@ -240,6 +242,13 @@ class Player extends AcGameObject{
 
     }
 
+    update_win(){
+        if(this.playground.state === "fighting" && this.character === "me" && this.playground.players.length === 1){
+            this.playground.state = "over";
+            this.playground.score_board.win();
+        }
+    }
+
     update_coldtime(){
         this.fireball_coldtime -= this.timedelta / 1000;
         this.fireball_coldtime = Math.max(this.fireball_coldtime, 0);
@@ -248,6 +257,7 @@ class Player extends AcGameObject{
         this.blink.coldtime = Math.max(this.blink_coldtime, 0);
 
     }
+
 
     update_move(){  //只负责更新玩家移动
         if(this.character === "robot" && this.spent_time > 4 && Math.random() < 1 / 300.0){
@@ -348,8 +358,12 @@ class Player extends AcGameObject{
 
 
     on_destroy(){
-        if(this.character === "me")
-            this.playground.state = "over";
+        if(this.character === "me"){
+            if(this.playground.state === "fighting"){
+                this.playground.state = "over";
+                this.playground.score_board.lose();
+            }
+        }
         for(let i = 0; i < this.playground.players.length; i ++){
             if(this.playground.players[i] === this){
                 this.playground.players.splice(i, 1);

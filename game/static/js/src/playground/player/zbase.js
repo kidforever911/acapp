@@ -260,11 +260,13 @@ class Player extends AcGameObject{
 
 
     update_move(){  //只负责更新玩家移动
-        if(this.character === "robot" && this.spent_time > 4 && Math.random() < 1 / 300.0){
+        if(this.character === "robot" && this.spent_time > 4 && Math.random() < 1 / 230.0){
             let player = this.playground.players[Math.floor(Math.random() * this.playground.players.length)];
             while(player === this.player){
                 player = this.playground.players[Math.floor(Math.random()  *this.playground.players.length)];
             }
+            //困难模式
+            //let player = this.playground.players[0];
             let tx = player.x + player.speed * this.vx * this.timedelta / 1000 * 0.3;
             let ty = player.y + player.speed * this.vy * this.timedelta / 1000 * 0.3;
             this.shoot_fireball(tx, ty);

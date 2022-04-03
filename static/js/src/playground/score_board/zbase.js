@@ -7,10 +7,10 @@ class ScoreBoard extends AcGameObject{
         this.state = null; //win:胜利, lose:失败
 
         this.win_img = new Image();
-        this.win_img.src = "https://cdn.acwing.com/media/article/image/2021/12/17/1_8f58341a5e-win.png";
+        this.win_img.src = "https://git.acwing.com/kidforever/photo/-/raw/main/1521638512887653.jpg";
 
         this.lose_img = new Image();
-        this.lose_img.src = "https://cdn.acwing.com/media/article/image/2021/12/17/1_9254b5f95e-lose.png"
+        this.lose_img.src = "https://git.acwing.com/kidforever/photo/-/raw/main/9150e4e5ly1fm0epu1fyxj20hs0hsdi8.jpg"
     }
 
     start(){

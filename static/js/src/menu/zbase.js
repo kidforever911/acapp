@@ -9,6 +9,7 @@ class AcGameMenu{
         <div class="ac_game_menu_game_introduction_content">&nbsp&nbsp&nbsp&nbsp移动：鼠标右键点击</div>
         <div class="ac_game_menu_game_introduction_content">&nbsp&nbsp&nbsp&nbsp技能1：<b>[火球]</b>先按Q键，再按鼠标左键进行技能使用</div>
         <div class="ac_game_menu_game_introduction_content">&nbsp&nbsp&nbsp&nbsp技能2：<b>[闪现]</b>先按F键，再按鼠标左键进行技能使用</div>
+        <div class="ac_game_menu_game_introduction_content">&nbsp&nbsp&nbsp&nbsp友情提示：<b>[多人模式]</b>需要三个人才可开启多人模式，也可以一个浏览器开三次该网页</div>
 
     </div>
     <div class="ac-game-menu-field">

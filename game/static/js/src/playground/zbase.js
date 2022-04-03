@@ -71,7 +71,7 @@ class AcGamePlayground{
         this.players.push(new Player(this, this.width / 2 / this.scale, 0.5, 0.05, "white", 0.15, "me", this.root.settings.username, this.root.settings.photo));
 
         if(mode === "single mode"){
-            for(let i = 0; i < 10; i ++){
+            for(let i = 0; i < 7; i ++){
                 this.players.push(new Player(this, this.width / 2 / this.scale, 0.5, 0.05, this.get_random_color(), 0.15, "robot"));
 
             }
